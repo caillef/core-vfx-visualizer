@@ -14,17 +14,33 @@
     <div>
         <h1 class="center-align" style="font-family: 'Montserrat', sans-serif;">Core VFX Visualizer</h1>
     </div>
+    
+    <nav style="margin-bottom: 10px">
+        <div class="nav-wrapper blue ">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="environments.html">Environments</a></li>
+                <li>More coming soon</li>
+            </ul>
+        </div>
+    </nav>
     <div id="gifs" class="row"></div>
+    <div class="center-align" id="loadall">
+        <button style="margin-bottom: 400px" class="btn red" onclick="loadAllGifs(100);document.getElementById('loadall').innerHTML=''">Load all gifs</button>        
+    </div>
 
     <script>
-        const gifsDiv = document.getElementById("gifs")
-        const NB_EFFECTS = 100
-        for (let i = 1; i <= NB_EFFECTS; i++) {
-            const img = document.createElement('img')
-            img.src = `images/${i}.gif`
-            img.classList += " col s12 m12 l6 xl4"
-            gifsDiv.append(img)
+        function loadAllGifs(nb) {
+            const gifsDiv = document.getElementById("gifs")
+            gifsDiv.innerHTML = ""
+            const NB_EFFECTS = nb || 10
+            for (let i = 1; i <= NB_EFFECTS; i++) {
+                const img = document.createElement('img')
+                img.src = `images/${i}.gif`
+                img.classList += " col s12 m12 l6 xl4"
+                gifsDiv.append(img)
+            }
         }
+        loadAllGifs(9)
     </script>
 </body>
 
