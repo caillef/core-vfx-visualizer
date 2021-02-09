@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Core VFX Visualizer</title>
+</head>
+<body>
+    <div>
+        <h1 class="center-align" style="font-family: 'Montserrat', sans-serif;">Core VFX Visualizer</h1>
+        <p class="center-align" style="font-family: 'Montserrat', sans-serif;">(non-official website)</p>
+    </div>
+    <div id="gifs" class="row"></div>
+
+    <script>
+        const gifsDiv = document.getElementById("gifs")
+        const NB_EFFECTS = 7
+        for (let i = 1; i <= NB_EFFECTS; i++) {
+            const img = document.createElement('img')
+            img.src = `images/${i}.gif`
+            img.classList += " col s12 m12 l6 xl4"
+            gifsDiv.append(img)
+        }
+    </script>
+</body>
+</html>
