@@ -19,20 +19,22 @@
         <div class="nav-wrapper blue ">
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="environments.html">Environments</a></li>
+                <li><a href="explosions.html">Explosions</a></li>
+                <li><a href="items.html">Items</a></li>
                 <li>More coming soon</li>
             </ul>
         </div>
     </nav>
     <div id="gifs" class="row"></div>
     <div class="center-align" id="loadall">
-        <button style="margin-bottom: 400px" class="btn red" onclick="loadAllGifs(100);document.getElementById('loadall').innerHTML=''">Load all gifs</button>        
+        <button style="margin-bottom: 400px" class="btn red" onclick="loadAllGifs();document.getElementById('loadall').innerHTML=''">Load all gifs</button>        
     </div>
 
     <script>
         function loadAllGifs(nb) {
             const gifsDiv = document.getElementById("gifs")
             gifsDiv.innerHTML = ""
-            const NB_EFFECTS = nb || 10
+            const NB_EFFECTS = nb || 64
             for (let i = 1; i <= NB_EFFECTS; i++) {
                 const img = document.createElement('img')
                 img.src = `images/${i}.gif`

@@ -17,14 +17,14 @@
         </a>
     </div>
     <a href="index.html">
-        <h1 class=" col center-align" style="font-family: 'Montserrat', sans-serif;">Core VFX Visualizer - Environments</h1>
+        <h1 class=" col center-align" style="font-family: 'Montserrat', sans-serif;">Core VFX Visualizer - Explosions</h1>
     </a>
 
     <nav style="margin-bottom: 10px">
         <div class="nav-wrapper blue ">
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li class="active"><a href="environments.html">Environments</a></li>
-                <li><a href="explosions.html">Explosions</a></li>
+                <li><a href="environments.html">Environments</a></li>
+                <li class="active"><a href="explosions.html">Explosions</a></li>
                 <li><a href="items.html">Items</a></li>
                 <li>More coming soon</li>
             </ul>
@@ -34,10 +34,10 @@
 
     <script>
         const gifsDiv = document.getElementById("gifs")
-        const NB_EFFECTS = 38
-        for (let i = 1; i <= NB_EFFECTS; i++) {
+        const NB_EFFECTS = 61
+        for (let i = 39; i <= NB_EFFECTS; i++) {
             const img = document.createElement('img')
-            img.src = `images/environments/${i}.gif`
+            img.src = `images/explosions/${i}.gif`
             img.classList += " col s12 m12 l6 xl4"
             gifsDiv.append(img)
         }
