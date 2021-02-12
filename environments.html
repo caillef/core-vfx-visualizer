@@ -22,6 +22,8 @@
                 <li class="active"><a href="environments.html">Environments</a></li>
                 <li><a href="explosions.html">Explosions</a></li>
                 <li><a href="items.html">Items</a></li>
+                <li><a href="magic.html">Magic</a></li>
+                <li><a href="misc.html">Misc</a></li>
             </ul>
         </div>
     </nav>
@@ -32,7 +34,7 @@
         const NB_EFFECTS = 38
         for (let i = 1; i <= NB_EFFECTS; i++) {
             const img = document.createElement('img')
-            img.src = `images/environments/${i}.gif`
+            img.src = `images/${i}.gif`
             img.classList += " col s12 m12 l6 xl4"
             gifsDiv.append(img)
         }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Environments</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="center-align" style="font-family: 'Montserrat', sans-serif;">Core VFX Visualizer</h1>
+    </div>
+
+    <nav style="margin-bottom: 10px" class="blue">
+        <div class="container nav-wrapper blue ">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="index.html">All</a></li>
+                <li><a href="environments.html">Environments</a></li>
+                <li><a href="explosions.html">Explosions</a></li>
+                <li><a href="items.html">Items</a></li>
+                <li><a href="magic.html">Magic</a></li>
+                <li class="active"><a href="misc.html">Misc</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="gifs" class="row"></div>
+
+    <script>
+        const gifsDiv = document.getElementById("gifs")
+        const NB_EFFECTS = 82
+        for (let i = 76; i <= NB_EFFECTS; i++) {
+            const img = document.createElement('img')
+            img.src = `images/${i}.gif`
+            img.classList += " col s12 m12 l6 xl4"
+            gifsDiv.append(img)
+        }
+    </script>
+</body>
+
+</html>
